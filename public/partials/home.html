@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/stylesheets/style.css  " />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>
+        <span>Video Store</span>
+        
+       
+         <a href="/#/login"><button class="btn btn-primary pull-right">Admin</button></a>
+      </h1> 
+      <hr />
+    </div>
+
+    <div class="container">
+            <p><a href="/#/admin">Admin Direct</a></p>
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Search for videos"
+        aria-label="Search"
+      />
+      <br />
+      <table class="container">
+        <tr>
+          <th>Movie Title</th>
+          <th>Running Time</th>
+          <th>Genre</th>
+          <th>Rating</th>
+          <th>Director</th>
+          <th>Status</th>
+          <th>Reserve</th>
+        </tr>
+        <tr ng-repeat="video in videos">
+          <td>{{ video.title }}</td>
+          <td>{{ video.running_time }}</td>
+          <td>{{ video.Genre }}</td>
+          <td>{{ video.Rating }}</td>
+          <td>{{ video.Director }}</td>
+          <td>{{ video.Status }}</td>
+          <td><button class="btn btn-primary">Reserve</button></td>
+        </tr>
+      </table>
+    </div>
+     <!-- <p><a href="/#/add-video">Add a Video</a></p> --> 
+  </body>
+</html>

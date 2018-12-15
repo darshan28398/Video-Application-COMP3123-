@@ -1,0 +1,20 @@
+<table class="container">
+    <tr>
+      <th>Movie Title</th>
+      <th>Running Time</th>
+      <th>Genre</th>
+      <th>Rating</th>
+      <th>Director</th>
+      <th>Status</th>
+      <th>Reserve</th>
+    </tr>
+    <tr ng-repeat="customer in customers">
+      <td>{{ customers.fName }}</td>
+      <td>{{ customers.lName }}</td>
+      <td>{{ customers.Address}}</td>
+      <td>{{ customers.City }}</td>
+      <td>{{ customers.PNumber }}</td>
+      <td>{{ customers.Status }}</td>
+      <td><button class="btn btn-primary">Reserve</button></td>
+    </tr>
+  </table>

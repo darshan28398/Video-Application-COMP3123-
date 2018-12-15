@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/stylesheets/style.css  " />
+  </head>
+
+  <body>
+        <div class="container">
+          <h1> 
+            <span>Video Store</span>
+            <br>
+            <span>Welcome,Admin!</span>
+            <a href="/#/"><button class='btn btn-danger pull-right'>Log Out</button></a>
+            <a href="customers.html"><button class='btn btn-success pull-right'>Customers</button></a>
+            <a href="/#/add-video"><button class='btn btn-primary pull-right'>Add A New Video</button> </a>
+      
+            <hr />
+          </h1>
+        </div>
+      
+        <div class="container">
+          <input class="form-control" type="text" placeholder="Search for videos" aria-label="Search">
+        </div>
+      <br />
+      <table class="container">
+        <tr>
+          <th>Movie Title</th>
+          <th>Running Time</th>
+          <th>Genre</th>
+          <th>Rating</th>
+          <th>Director</th>
+          <th>Status</th>
+          <th>Edit</th>
+          <th> Delete </th>
+        </tr>
+        <tr ng-repeat="video in videos">
+          <td>{{ video.title }}</td>
+          <td>{{ video.running_time }}</td>
+          <td>{{ video.Genre }}</td>
+          <td>{{ video.Rating }}</td>
+          <td>{{ video.Director }}</td>
+          <td>{{ video.Status }}</td>
+          <td> <a href="/#/video/{{video._id}}"><button class="btn btn-primary"  ng-controller="EditVideoCtrl">Edit</button></td>
+            <td><a href="/#/video/delete/{{video._id}}">
+                <button class='btn btn-danger'>Delete</button>
+            </a></td>
+        </tr>
+      </table>
+    </div>
+     <!-- <p><a href="/#/add-video">Add a Video</a></p> --> 
+  </body>
+</html>
